@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script> src="./script.js"</script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 
 </head>
@@ -206,19 +206,19 @@
                     <form action="javascript:sendmail()" method="post">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" class="form-control" name="Name" id="Name" placeholder="Name" required="">
+                                <input type="text" class="form-control" name="name" id="name" placeholder="name" required="">
                             </div>
                             <div class="field email">
-                                <input type="email" class="form-control" name="Sender" id="Sender" placeholder="Email"
+                                <input type="email" class="form-control" name="email" id="Sender" placeholder="email"
                                 required="">
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" class="form-control" name="Subject" id="Subject" placeholder="Subject"
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="subject"
                             required="">
                         </div>
                         <div class="field textarea">
-                            <textarea name="Message" class="form-control" id="Message" placeholder="Message"
+                            <textarea name="message" class="form-control" id="message" placeholder="message"
                             required=""></textarea>
                         </div>
                         <div class="button-area">
@@ -235,51 +235,5 @@
     <footer>
         <span>Created By <a href="Mistercap's Creation ">KhilanPatel</a> | <span class="far fa-copyright"></span> 2020 All rights reserved.</span>
     </footer>
-
-    <script src="script.js"></script>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-   
-  <script>  
-  
-       function sendmail(){
-      
-              var name = $('#Name').val();
-              var email = $('#Sender').val();
-              var subject = $('#Subject').val();
-        var message = $('#Message').val();
-  
-              // var body = $('#body').val();
-  
-              var Body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message;
-              //console.log(name, phone, email, message);
-  
-              Email.send({
-        SecureToken:"dd45288a-75c6-42eb-a1c4-473da5358386",
-				To: 'khilanpatel15@gmail.com',
-				From: "testingmail0722@gmail.com",
-				Subject: "New message on contact from "+name,
-				Body: Body
-			}).then(
-				message =>{
-					//console.log (message);
-					if(message=='OK'){
-					alert('Your mail has been send. Thank you for connecting.');
-					}
-					else{
-						console.error (message);
-						alert('There is error at sending message. ')
-						
-					}
-
-				}
-			);
-  
-  
-  
-          }
-  
-  
-      </script>
-   </script>
 </body>
 </html>
